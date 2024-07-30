@@ -234,6 +234,13 @@ main {
   margin-bottom: 2rem;
 }
 
+.info {
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+  color: var(--grey-600);
+  margin-top: 2rem;
+}
+
 .suggestions {
   list-style: none;
   padding: 0;

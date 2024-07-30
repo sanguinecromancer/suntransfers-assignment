@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Character } from '../types';
-
 interface AutoCompleteProps {
   characters: Character[];
 }
@@ -119,17 +118,11 @@ const AutoComplete: React.FC<AutoCompleteProps> = ({ characters }) => {
           <p>Selected Character: {selectedCharacter.name}</p>
         </div>
       )}
-
-		<p>Hello! In this search form, we are getting a paginated data from API and caching it (for performance purposes). We
-			use useCallback and useEffect for memoization and preventing unnecessary re-renders.
-
-			I tried to include as many scenarios as possible. In addition to regular http errors:
-
-			- aborting in case of timeout.
-			- fallback page with a refresh button
-			- unexpected API response structure
-			
-		</p>
+			<p className="info">Hello! In this search form, I am getting a paginated data from API and caching it (for performance purposes). I
+				used useCallback and useEffect for memoization and preventing unnecessary re-renders.
+				Error scenarios: http errors such as aborting in case of timeout,
+				fallback page with a refresh button, unexpected API response structure.
+			</p>
     </section>
   );
 };
