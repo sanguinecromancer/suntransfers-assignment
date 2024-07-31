@@ -118,10 +118,10 @@ const AutoComplete: React.FC<AutoCompleteProps> = ({ characters }) => {
           <p>Selected Character: {selectedCharacter.name}</p>
         </div>
       )}
-			<p className="info">Hello! In this search form, I am getting a paginated data from API and caching it (for performance purposes). I
-				used useCallback and useEffect for memoization and preventing unnecessary re-renders.
-				Error scenarios: http errors such as aborting in case of timeout,
-				fallback page with a refresh button, unexpected API response structure.
+			<p className="info">Hello! In this search form, I am getting a paginated data from API and caching it 
+        (for performance purposes). I	used useCallback and useEffect for memoization and preventing 
+        unnecessary re-renders. Error scenarios: http errors such as aborting in case of timeout,
+				fallback page with a refresh button and unexpected API response structure.
 			</p>
     </section>
   );

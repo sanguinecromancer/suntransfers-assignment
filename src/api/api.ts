@@ -25,7 +25,7 @@ const loadAllCharacters = async (): Promise<Character[]> => {
         throw new Error('Unexpected API response structure');
       }
 
-			// deep copy for immutability and preventing side-effects - it might lose some performance
+			// deep copy for immutability and preventing side-effects
       allCharacters = [...allCharacters, ...JSON.parse(JSON.stringify(data.results))];
       url = data.info.next; // next page URL
     }

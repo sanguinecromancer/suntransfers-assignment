@@ -10,7 +10,9 @@ npm run test (for unit test)
 In this project I'm using an API that serves cartoon characters of Rick and Morty. (892 items, cartoon characters)
 I am familiar with this API so I picked this one, as it's one of my favorite cartoons :)
 
-I cache the results into an array (we start over only when user refreshes). 
+I cache the results into an array (we start over only when user refreshes).
+
+I tried to add descriptive comments as possible.
 
 #### CSS
 I have a generic file that I take from project to project, I added some changes for this assignment.
@@ -23,11 +25,12 @@ Components could be also wrapped in a memo, although they didn't unnecessarily r
 When I create a deep copy of the array that comes from API, I lose a bit from performance. Normally we use immer library for better performance with deep copying but I did not want to install a new library.
 
 #### Error handling
-I tried to include as many scenarios as possible. In addition to regular http errors:
+I tried to handle as many scenarios as possible. In addition to regular http errors:
 
 - aborting in case of timeout.
 - fallback page with a refresh button
 - unexpected API response structure
+- typing special characters
 
 #### Testing
 Employers don't mention testing in the assignments but from my experience they still want to see a test. I added at least one test that mimics API call - I also didn't install a library, 
