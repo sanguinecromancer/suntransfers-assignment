@@ -32,7 +32,8 @@ const loadAllCharacters = async (): Promise<Character[]> => {
 
     return allCharacters;
   } catch (error) {
-    console.error('Failed to load characters:', error.message);
+    const errorMessage = (error as Error).message;
+    console.error('Failed to load characters:', errorMessage);
     return [];
   }
 };
