@@ -19,7 +19,7 @@ I have a generic file that I take from project to project, I added some changes 
 
 #### Performance
 For performance I didn't make use of external libraries but used React's suspense and lazy.
-And then for debouncing of the search, I used a custom function (not from lodash).
+And then for debouncing of the search, I used a custom function, where we make sure to wait 300 miliseconds after user has stopped typing.
 Components could be also wrapped in a memo, although they didn't unnecessarily refresh to my observation.
 
 When I create a deep copy of the array that comes from API, I lose a bit from performance. Normally we use immer library for better performance with deep copying but I did not want to install a new library.
@@ -33,7 +33,7 @@ I tried to handle as many scenarios as possible. In addition to regular http err
 - typing special characters
 
 #### Testing
-Employers don't mention testing in the assignments but from my experience they still want to see a test. I added at least one test that mimics API call - I also didn't install a library, 
+Employers don't mention testing in the assignments but from my experience they still want to see a test. I added some tests - I also didn't install a library, 
 I am using native Node.JS Test Runner.
 Node.js 18 or newer is needed to use the built-in test runner. You can run the test with:
 
